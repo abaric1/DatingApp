@@ -30,7 +30,7 @@ import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
-
+import { TimeagoModule, TimeagoPipe } from 'ngx-timeago';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -47,7 +47,8 @@ export function tokenGetter() {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      TimeagoPipe
    ],
    imports: [
       BrowserModule,
@@ -60,6 +61,7 @@ export function tokenGetter() {
       NgxGalleryModule,
       FileUploadModule,
       ReactiveFormsModule,
+      TimeagoModule.forRoot(),
       BsDatepickerModule.forRoot(),
       JwtModule.forRoot({
          config: {
