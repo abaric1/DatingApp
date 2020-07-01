@@ -15,11 +15,11 @@
 
   <div class="form-group">
     <input type="text" 
-      [ngClass]="{'is-invalid': registerForm.get('name').errors 
-        && registerForm.get('name').touched}"
+      [ngClass]="{'is-invalid': registerForm.get('username').errors 
+        && registerForm.get('username').touched}"
       class="form-control" 
-      formControlName="name" 
-      placeholder="Name">
+      formControlName="username" 
+      placeholder="Username">
     <div class="invalid-feedback">Please choose a username</div>
   </div>
 
