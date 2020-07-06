@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { User } from 'src/app/models/User';
+import { User } from 'src/app/_models/User';
 import { UserService } from 'src/app/_services/User.service';
 import { AletifyService } from 'src/app/_services/aletify.service';
 import { AuthService } from 'src/app/_services/auth.service';

@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { AletifyService } from '../_services/aletify.service';
-import { User } from '../models/User';
+import { User } from '../_models/User';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Router } from '@angular/router';

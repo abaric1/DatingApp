@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
-import { Photo } from 'src/app/models/Photo';
+import { Photo } from 'src/app/_models/Photo';
 import { AuthService } from 'src/app/_services/auth.service';
 import { environment } from 'src/environments/environment';
 import { AletifyService } from 'src/app/_services/aletify.service';

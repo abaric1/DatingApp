@@ -25,7 +25,6 @@ import { MessagesComponent } from './messages/messages.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
-import { UserService } from './_services/User.service';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { AletifyService } from './_services/aletify.service';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
@@ -41,6 +40,9 @@ import { UserManagmentComponent } from './admin/user-managment/user-managment.co
 import { PhotoManagmentComponent } from './admin/photo-managment/photo-managment.component';
 import { AdminService } from './_services/admin.service';
 import { RolesModalComponent } from './admin/roles-modal/roles-modal.component';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { UserService } from './_services/User.service';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -62,7 +64,8 @@ export function tokenGetter() {
       HasRoleDirective,
       UserManagmentComponent,
       PhotoManagmentComponent,
-      RolesModalComponent
+      RolesModalComponent,
+      MemberMessagesComponent
    ],
    imports: [
       BrowserModule,
@@ -98,7 +101,8 @@ export function tokenGetter() {
       MemberEditResolver,
       PreventUnsavedChanges,
       ListsResolver,
-      AdminService
+      AdminService,
+      MessagesResolver
    ],
    entryComponents: [
       RolesModalComponent

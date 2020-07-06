@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../_services/User.service';
 import { AletifyService } from '../../_services/aletify.service';
-import { User } from '../../models/User';
+import { User } from '../../_models/User';
 import { ActivatedRoute } from '@angular/router';
-import { Pagination, PaginatedResult } from 'src/app/models/Pagination';
+import { Pagination, PaginatedResult } from 'src/app/_models/Pagination';
 
 @Component({
   selector: 'app-member-list',
