@@ -30,11 +30,11 @@ namespace DatingApp.API.Data
                     roleManager.CreateAsync(role).Wait();
                 }
 
-                foreach (var user in users)
-                {
-                    userManager.CreateAsync(user, "password").Wait();
-                    userManager.AddToRoleAsync(user, "Member");
-                }
+                // foreach (var user in users)
+                // {
+                //     userManager.CreateAsync(user, "password").Wait();
+                //     userManager.AddToRoleAsync(user, "Member");
+                // }
 
                 // create admin user
                 var adminUser = new User
@@ -53,13 +53,13 @@ namespace DatingApp.API.Data
             }
         }
 
-        private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        {
-            using (var hmac = new System.Security.Cryptography.HMACSHA512())
-            {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-            }
-        }
+        // private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        // {
+        //     using (var hmac = new System.Security.Cryptography.HMACSHA512())
+        //     {
+        //         passwordSalt = hmac.Key;
+        //         passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+        //     }
+        // }
     }
 }
